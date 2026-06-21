@@ -1,0 +1,29 @@
+# Strava OAuth tokens — generated at runtime, NEVER commit
+tokens.json
+
+# Local copies that may contain real Client ID/Secret after setup
+authorize.local.py
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# uv
+.uv/
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
