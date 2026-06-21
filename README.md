@@ -11,6 +11,8 @@ This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server
 - "What are my all-time stats?"
 - "Which clubs am I in?"
 
+**Topics this helps with:** Strava + Claude integration · Strava MCP server · chat with your Strava data · query activities, stats & segments in natural language · build a Strava AI assistant · Strava API v3 · Model Context Protocol (MCP).
+
 ---
 
 ## Features
