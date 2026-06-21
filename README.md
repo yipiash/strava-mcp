@@ -2,7 +2,7 @@
 
 Talk to Claude about your Strava data — your activities, stats, segments, clubs, gear, routes, and more. Just chat naturally and Claude pulls the data for you.
 
-This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that connects the **Claude Desktop app** to the **Strava API**. It runs locally on your machine — your data and your Strava keys never leave your computer.
+This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that connects the **Claude Desktop app** to the **Strava API**. It works on both **Mac and Windows**, with a one-command setup script for each. It runs locally on your machine — your data and your Strava keys never leave your computer.
 
 **Examples of what you can ask:**
 - "What were my last 10 rides?"
@@ -10,6 +10,38 @@ This is a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server
 - "Show me my heart rate data for yesterday's ride"
 - "What are my all-time stats?"
 - "Which clubs am I in?"
+
+---
+
+## Features
+
+- Browse your activities with pagination, and get full detail on any single activity
+- Create new activities and update existing ones (name, type, description, gear, commute/trainer flags)
+- Pull raw activity streams — heart rate, power, cadence, speed, altitude, GPS, temperature, and more
+- View activity laps, segment/zone breakdowns, kudos, and comments
+- Explore and star segments, browse your starred segments, and analyze your segment efforts over time
+- Read athlete profile, all-time and recent stats, and heart-rate / power zones
+- Update athlete weight
+- Browse clubs you belong to, plus their members, admins, and recent activity feeds
+- Look up gear (bikes and shoes) and your saved routes, including route streams
+- Check the status of an upload
+- Everything runs locally — your Strava Client ID, Secret, and tokens never leave your machine
+
+---
+
+## Tool Coverage
+
+This MCP server implements **31 tools** covering the read and write endpoints of the [Strava API v3](https://developers.strava.com/docs/reference/) that matter for everyday training questions:
+
+- ✅ Athlete & Profile (4 tools) — authenticated athlete, all-time stats, zones, update weight
+- ✅ Activities (9 tools) — list, detail, create, update, laps, zones, streams, kudos, comments
+- ✅ Segments (8 tools) — get, explore, star, list starred, efforts, effort detail, effort streams, segment streams
+- ✅ Clubs (5 tools) — list clubs, club detail, members, admins, activity feed
+- ✅ Routes (3 tools) — list routes, route detail, route streams
+- ✅ Gear (1 tool) — look up a bike or pair of shoes by gear ID
+- ✅ Uploads (1 tool) — check upload status
+
+> **Note:** The data available depends on the OAuth scopes you grant during setup and on your Strava plan. Some fields (such as detailed power and heart-rate streams) require a recording device that captured them. Write actions (creating/updating activities, starring segments) require the matching `activity:write` / `profile:write` scopes, which the setup flow requests by default.
 
 ---
 
@@ -173,4 +205,4 @@ Open a new conversation and ask:
 
 ---
 
-Built for TeamBDC, by Yanur Islam Piash. Shut Up Legs! 🚴
+Originally built for TeamBDC, but now made public, by Yanur Islam Piash. Shut Up Legs! 🚴
